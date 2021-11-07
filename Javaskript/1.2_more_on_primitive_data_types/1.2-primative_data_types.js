@@ -51,7 +51,7 @@ s="He's got it!";
 let bill=250;
 let tax=17/100;
 let sum= bill+bill*tax;
-console.log("Your total bill is"+ ${bill+bill*tax});
+console.log("Your total bill is"+ sum);
 
 // Round the number 50.6 to its nearest integer
 Math.round(50.6)
