@@ -1,5 +1,6 @@
 let MyString="my name"
 console.log(typeof MyString);
+console.log("hello");
 let num=4;
 console.log(typeof num);
 let car={tesla:3};
@@ -8,3 +9,7 @@ let winterSeason= false;
 console.log(typeof winterSeason);
 let my;
 console.log(typeof my);
+let mn=null;
+console.log(mn);
+let sym = Symbol()
+console.log(typeof sym);
