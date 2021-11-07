@@ -1,6 +1,5 @@
 let MyString="my name"
 console.log(typeof MyString);
-console.log("hello");
 let num=4;
 console.log(typeof num);
 let car={tesla:3};
