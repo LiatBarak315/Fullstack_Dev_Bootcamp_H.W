@@ -54,5 +54,7 @@ let sum= bill+bill*tax;
 console.log("Your total bill is"+ ${bill+bill*tax});
 
 // Round the number 50.6 to its nearest integer
+Math.round(50.6)
 
 //Create a variable that is undefined
+let p;
