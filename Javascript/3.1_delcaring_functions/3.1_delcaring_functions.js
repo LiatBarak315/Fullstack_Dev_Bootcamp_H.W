@@ -17,21 +17,30 @@ function welcome() {
     let welcome = 'Welcome to Appleseeds Bootcamp!';
     return welcome;
 }
-const welcome = () => 'Welcome to Appleseeds Bootcamp!';
+const welcome = function(){
+    let welcome = 'Welcome to Appleseeds Bootcamp!';
+    return welcome;
+} 
 
 function power(a) {
     let myNumber = a;
     let result = Math.pow(myNumber, 2);
     return result;
 }
-const pawer = (a) => Math.pow(a, 2);
+const power = function (a) {
+    let result = Math.pow(a, 2);
+    return result;
+  }
 
 function add(a, b = 5) {
     let myNumber = a;
     let sum = myNumber + b;
     return sum;
 }
-const add = (a,b=5) => a+b;
+const add = function (a,b=5) {
+    let sum = a + b;
+    return sum;
+  }
 
 // From function expressions to function declarations
 const hello = () => "Hello!";
