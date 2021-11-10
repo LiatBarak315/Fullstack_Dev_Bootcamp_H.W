@@ -2,18 +2,12 @@ const people = ["Greg", "Mary", "Devon", "James"];
 //1
 for (let i = 0; i < people.length; i++) {
   console.log(people[i]);
-  //2
-  if (people[i] === "Greg") {
-    people.splice(i, 1);
-    i--;
-  }
-  //3
-  if (people[i] === "James") {
-    people.splice(i, 1);
-    i--;
-  }
 }
 console.log(people);
+//2
+people.shift();
+//3
+people.pop();
 //4
 people.unshift("Matt");
 console.log(people);
@@ -34,7 +28,14 @@ console.log(arr);
 console.log(people.indexOf("Mary"));
 //9
 console.log(people.indexOf("Foo"));
-//10 miss the Redefine part לא עובד
-const arr2 = people.splice(3, 1, "Elizabeth", "Artie");
-console.log(arr2);
+//10
+people.shift();
+people.unshift("Greg");
+people.pop();
+people.push("James");
+console.log(people);
+people.splice(2, 1, "Elizabeth", "Artie");
+console.log(people);
 //11
+const withBob=people.concat("Bob");
+console.log(withBob);

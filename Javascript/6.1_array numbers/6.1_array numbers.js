@@ -4,25 +4,25 @@ for (let i = 0; i < arr.length; i++) {
 }
 const arrayLength = (arr) => {
   let count = 0;
-  for (let i = 0; arr[i] !== NaN; i++) {
+  for (let i = 0; arr[i] !== undefined; i++) {
     count++;
   }
-  console.log(count);
+  return count;
 };
 const arraySum = (arr) => {
   let sum = 0;
-  for (let i = 0; arr[i] !== NaN; i++) {
+  for (let i = 0; arr[i] !== undefined; i++) {
     sum = sum + arr[i];
   }
-  console.log(sum);
+  return sum;
 };
 const arrayMulti = (arr) => {
   let sum = 0;
-  for (let i = 0; arr[i] !== NaN; i++) {
-    sum = sum + arr[i] * 2;
+  for (let i = 0; arr[i] !== undefined; i++) {
+    sum *= arr[i];
   }
-  console.log(sum);
+  return sum;
 };
-arrayLength(arr);
-//arraySum(arr);
-//arrayMulti(arr);
+console.log(arrayLength(arr));
+console.log(arraySum(arr)); 
+console.log(arrayMulti(arr));
