@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+      height: 100px;
+      visibility: hidden;
+    }
+  </style>
+  <body>
+    <div>
+      <input type="checkbox" id="check" name="check" />
+      <label for="check">check</label>
+    </div>
+    <img src="baby.jpeg" alt="baby" />
+  </body>
+  <script>
+    const img = document.querySelector("img");
+    const c = document.querySelector("#check");
+    c.addEventListener("change", () => {
+      if (c.checked) {
+        img.style.visibility = "visible";
+      } else {
+        img.style.visibility = "hidden";
+      }
+    });
+  </script>
+</html>
