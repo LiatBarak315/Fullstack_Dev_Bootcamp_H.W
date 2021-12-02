@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Size</title>
+  </head>
+  <style>
+    #text {
+      font-size:25px;
+    }
+  </style>
+  <body>
+    <h1 id="text">Click the button and you will find out what is happening</h1>
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+  </body>
+  <script>
+    const bt = document.getElementById("btn1");
+    const bt1 = document.getElementById("btn2");
+    const txt = document.querySelector("#text");
+    const h1s = getComputedStyle(txt);
+    let size = parseInt(h1s.fontSize);
+    bt.addEventListener("click", function () {
+      if (size < 100) {
+        size++;
+        let nSize = `${size}px`;
+        txt.style.fontSize = nSize;
+      }
+    });
+    bt1.addEventListener("click", function () {
+      if (size >6) {
+        size--;
+        let nSize = `${size}px`;
+        txt.style.fontSize = nSize;
+      }
+    });
+    console.log(bt);
+    console.dir(txt);
+  </script>
+</html>
