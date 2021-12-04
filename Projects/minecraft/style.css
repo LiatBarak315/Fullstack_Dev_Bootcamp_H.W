@@ -1,0 +1,92 @@
+.sky {
+  background-color: #439df2;
+}
+.ground {
+  background: url("img/Dirt.png") no-repeat center center/cover;
+}
+.tree {
+  background: url("img/Wood.png") no-repeat center center/cover;
+}
+.leaf {
+  background: url("img/Leaves.png") no-repeat center center/cover;
+}
+.stone {
+  background: url("img/Stone.png") no-repeat center center/cover;
+}
+.grass {
+  background: url("img/GrassBlock.png") no-repeat center center/cover;
+}
+.board {
+  height: 95vmin;
+  width: 95vmin;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  visibility: hidden;
+  margin-left: 20%;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start {
+  height: 100vh;
+  width: 90vw;
+  background-image: url("/פרויקט/minecraft/img/start.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  visibility: visible;
+}
+#btnstart {
+  height: 40px;
+  font-size: 30px;
+  width: 100px;
+  color: #000;
+  background-color: blanchedalmond;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+#tools {
+  height: 100vh;
+  width: 10vw;
+  background-color: lightgray;
+}
+#axe,
+#picaxe,
+#shovel {
+  border: black 2px solid;
+  height: 5rem;
+  width: 4.5rem;
+  margin-top: 2rem;
+}
+#axe {
+  background: url("img/axe.jpeg") no-repeat center center/cover;
+}
+#picaxe {
+  background: url("img/picaxe.jpeg") no-repeat center center/cover;
+}
+#shovel {
+  background: url("img/shovel.jpeg") no-repeat center center/cover;
+}
+#gameplace {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+#saver {
+  height: 3rem;
+  width: 3rem;
+  border: black 1px solid;
+  margin-top: 8px;
+  margin-left: 8px;
+}
