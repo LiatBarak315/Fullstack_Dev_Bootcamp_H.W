@@ -33,12 +33,6 @@ const stone = [
   { x: 19, y: 6 },
   { x: 18, y: 6 },
 ];
-// const inventory = {
-//   ground: 0,
-//   leaf: 0,
-//   tree: 0,
-//   stone: 0,
-// };
 function setGrid() {
   for (let i = 1; i <= 25; i++) {
     for (let j = 1; j <= 25; j++) {
@@ -113,7 +107,7 @@ board.addEventListener("click", (event) => {
         removeElement(event.target);
       break;
   }
-  if (saveon && event.target.classList.value === "sky") {
+  if (Save.classList.value&&saveon && event.target.classList.value === "sky") {
     event.target.classList.value = Save.classList.value;
     saveon = false;
     Save.classList.value = "";
@@ -123,6 +117,7 @@ board.addEventListener("click", (event) => {
 let saveon = false;
 Save.addEventListener("click", (event) => {
   saveon = true;
+  selectTool = "";
 });
 function removeElement(element) {
   Save.classList = "";
