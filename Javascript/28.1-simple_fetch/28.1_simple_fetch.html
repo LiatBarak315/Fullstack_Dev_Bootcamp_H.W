@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click for joke</button>
+    <h2 id="title"></h2>
+    <p id="joke"></p>
+  </body>
+  <script>
+    const myButton = document.querySelector("button");
+    const h2 = document.querySelector("h2");
+    const p = document.querySelector("p");
+    const url = "https://api.jokes.one/jod";
+    myButton.addEventListener("click", (e) => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          h2.innerText = data.contents.jokes[0].joke.title;
+          p.innerText = data.contents.jokes[0].joke.text;
+        })
+        .catch((err) => console.log(err));
+    });
+  </script>
+</html>
