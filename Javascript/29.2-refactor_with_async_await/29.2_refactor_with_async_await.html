@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click for joke</button>
+    <h2 id="title"></h2>
+    <p id="joke"></p>
+  </body>
+  <script>
+    const myButton = document.querySelector("button");
+    const h2 = document.querySelector("h2");
+    const p = document.querySelector("p");
+    const url = "https://api.jokes.one/jod";
+
+    const getJoke = async () => {
+      const resp = await fetch("https://api.jokes.one/jod");
+
+      try {
+        const {
+          contents: { jokes },
+        } = await resp.json();
+        h2.innerText = jokes[0].joke.title;
+        p.innerText = jokes[0].joke.text;
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    myButton.addEventListener("click", getJoke);
+  </script>
+</html>
