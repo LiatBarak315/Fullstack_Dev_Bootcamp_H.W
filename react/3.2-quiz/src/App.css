@@ -1,0 +1,7 @@
+.quiz-container {
+  padding: 8px;
+  border: 1px black solid;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+}
